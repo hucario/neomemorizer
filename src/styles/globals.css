@@ -1,0 +1,71 @@
+/** For animation of gradients. I probably don't need any more than four. */
+@property --color-stop {
+	syntax: '<color>';
+	inherits: true;
+	initial-value: transparent;
+}
+@property --color-stop2 {
+	syntax: '<color>';
+	inherits: true;
+	initial-value: transparent;
+}
+@property --color-stop3 {
+	syntax: '<color>';
+	inherits: true;
+	initial-value: transparent;
+}
+@property --theme-ui-colors-mainHeroBg1Stop {
+	syntax: '<color>';
+	inherits: true;
+	initial-value: transparent;
+}
+@property --theme-ui-colors-mainHeroBg2Stop {
+	syntax: '<color>';
+	inherits: true;
+	initial-value: transparent;
+}
+@property --theme-ui-colors-background {
+	syntax: '<color>';
+	inherits: true;
+	initial-value: transparent;
+}
+
+:root {
+	font-feature-settings: "zero", "ss01", "ss02", "ccmp", "case", "calt";
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+@media (prefers-reduced-motion: no-preference) {
+	:root {
+		transition: --theme-ui-colors-mainHeroBg1Stop var(--theme-ui-colors-themeTransitionTime),
+		color var(--theme-ui-colors-themeTransitionTime),
+		--theme-ui-colors-text var(--theme-ui-colors-themeTransitionTime),
+		--theme-ui-colors-background var(--theme-ui-colors-themeTransitionTime),
+		--theme-ui-colors-primary var(--theme-ui-colors-themeTransitionTime),
+		--theme-ui-colors-secondary var(--theme-ui-colors-themeTransitionTime),
+		--theme-ui-colors-muted var(--theme-ui-colors-themeTransitionTime),
+		--theme-ui-colors-highlight var(--theme-ui-colors-themeTransitionTime),
+		--theme-ui-colors-gray var(--theme-ui-colors-themeTransitionTime),
+		--theme-ui-colors-accent var(--theme-ui-colors-themeTransitionTime),
+		--theme-ui-colors-mainHeroBg2Stop var(--theme-ui-colors-themeTransitionTime);
+
+	}
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+/** I like not having to worry about default styles thanks */
+* {
+	margin: 0;
+	padding: 0;
+	border: none;
+	background: none;
+	box-sizing: border-box;
+}
+
+button {
+	color: inherit;
+	background: none;
+	font: inherit;
+}

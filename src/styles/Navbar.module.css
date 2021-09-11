@@ -1,0 +1,35 @@
+.main {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: auto;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	backdrop-filter: blur(2px);
+}
+
+.centerH {
+	width: 100%;
+	min-height: 100vh;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+}
+.title {
+	padding-top: 1rem;
+	user-select: none;
+	cursor: default;
+}
+
+@supports (background-clip: text) {
+	.title {
+		color: transparent;
+		background: linear-gradient(347deg, #550fff, red);
+		background-clip: text;
+	}
+}

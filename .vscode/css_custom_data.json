@@ -1,0 +1,14 @@
+{
+	"atDirectives": [
+	  {
+		"name": "@property",
+		"description": "Create a custom CSS property with Houdini.",
+		"references": [
+		  {
+			"name": "MDN's Houdini documentation",
+			"url": "https://developer.mozilla.org/en-US/docs/Web/Guide/Houdini"
+		  }
+		]
+	  }
+	]
+  }
