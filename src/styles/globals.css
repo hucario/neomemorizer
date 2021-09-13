@@ -29,9 +29,33 @@
 	inherits: true;
 	initial-value: transparent;
 }
-
+@property --theme-ui-colors-containerBg1 {
+	syntax: '<color>';
+	inherits: true;
+	initial-value: transparent;
+}
+@property --theme-ui-colors-containerBg2 {
+	syntax: '<color>';
+	inherits: true;
+	initial-value: transparent;
+}
+@property --theme-ui-colors-inputBg1 {
+	syntax: '<color>';
+	inherits: true;
+	initial-value: transparent;
+}
+@property --theme-ui-colors-inputBg2 {
+	syntax: '<color>';
+	inherits: true;
+	initial-value: transparent;
+}
+@property --theme-ui-colors-inpTextCol {
+	syntax: '<color>';
+	inherits: true;
+	initial-value: transparent;
+}
 :root {
-	font-feature-settings: "zero", "ss01", "ss02", "ccmp", "case", "calt";
+	font-feature-settings: "zero", "ss01", "ccmp", "case", "calt";
 	overflow-x: hidden;
 	overflow-y: scroll;
 }
@@ -47,7 +71,12 @@
 		--theme-ui-colors-highlight var(--theme-ui-colors-themeTransitionTime),
 		--theme-ui-colors-gray var(--theme-ui-colors-themeTransitionTime),
 		--theme-ui-colors-accent var(--theme-ui-colors-themeTransitionTime),
-		--theme-ui-colors-mainHeroBg2Stop var(--theme-ui-colors-themeTransitionTime);
+		--theme-ui-colors-mainHeroBg2Stop var(--theme-ui-colors-themeTransitionTime),
+		--theme-ui-colors-containerBg1 var(--theme-ui-colors-themeTransitionTime),
+		--theme-ui-colors-containerBg2 var(--theme-ui-colors-themeTransitionTime),
+		--theme-ui-colors-inputBg1 var(--theme-ui-colors-themeTransitionTime),
+		--theme-ui-colors-inputBg2 var(--theme-ui-colors-themeTransitionTime),
+		--theme-ui-colors-inpTextCol var(--theme-ui-colors-themeTransitionTime);
 
 	}
 }
@@ -64,8 +93,18 @@ a {
 	box-sizing: border-box;
 }
 
-button {
+button, input {
 	color: inherit;
 	background: none;
 	font: inherit;
+}
+
+#__next, body {
+	width: 100%;
+	height: 100vh;
+	background: -webkit-radial-gradient(
+		top left,
+		var(--theme-ui-colors-mainHeroBg1Stop),
+		var(--theme-ui-colors-mainHeroBg2Stop)
+	);
 }

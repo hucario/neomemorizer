@@ -1,18 +1,74 @@
 .main {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 100%;
-	min-height: 100vh;
-	overflow: hidden;
-}
-.hero {
-	padding-top: 30vh;
-	width: 100%;
-	height: 100vh;
 	background: -webkit-radial-gradient(
 		top left,
-		var(--theme-ui-colors-mainHeroBg1Stop),
-		var(--theme-ui-colors-mainHeroBg2Stop)
+		var(--theme-ui-colors-containerBg1),
+		var(--theme-ui-colors-containerBg2)
 	);
+	max-width: 50%;
+	width: 40em;
+	min-height: 10rem;
+	margin-top: 2rem;
+	border-radius: 0.4rem;
+	cursor: default;
+	user-select: none;
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+.progressTop, .progressBottom {
+	height: 0.2rem;
+	width: 100%;
+	transition: transform 250ms;
+	transform-origin: left;
+}
+.progressTop {
+	background: var(--theme-ui-colors-stageProgressBg);
+}
+.progressBottom {
+	background: var(--theme-ui-colors-wordProgressBg);
+}
+.textContainer {
+	padding: 0.8rem 1rem;
+	width: 100%;
+	min-height: 0;
+	flex-grow: 1;
+	line-height: 1.4;
+	position: relative;
+}
+.underline {
+	width: 1ch;
+	height: 1px;
+	position: absolute;
+	left: -1ch;
+	top: -2px;
+	background: var(--theme-ui-colors-text);
+	transition: transform 250ms;
+	transform-origin: left;
+}
+
+.inp {
+	background: -webkit-radial-gradient(
+		top left,
+		var(--theme-ui-colors-inputBg1, var(--theme-ui-colors-containerBg1)),
+		var(--theme-ui-colors-inputBg2, var(--theme-ui-colors-containerBg2))
+	);
+	max-width: 50%;
+	width: 40rem;
+	margin-top: 2rem;
+	border-radius: 1rem;
+	cursor: text;
+	color: var(--theme-ui-colors-inpTextCol);
+	padding: 1rem;
+}
+.textContainer > span {
+	transition: opacity 250ms, color 250ms;
+}
+.invisible {
+	opacity: 0;
+}
+.revisible {
+	opacity: 1;
+	color: var(--theme-ui-colors-revisible, rgb(255, 68, 99))
 }

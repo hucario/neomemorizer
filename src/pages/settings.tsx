@@ -7,7 +7,7 @@ const Settings: NextPage = () => {
 	return (<>
 			<Head>
 				<title>NeoMemorizer - Settings</title>
-				<meta name="description" content="Memorize blocks of text easily." />
+				<meta name="description" content="Memorize blocks of text easily with NeoMemorizer." />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
@@ -18,3 +18,10 @@ const Settings: NextPage = () => {
 }
 
 export default Settings
+
+/**
+ * To-do:
+ * Swap between per-line | per-word
+ * "Map" customization
+ * 
+ */
