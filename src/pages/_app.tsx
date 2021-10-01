@@ -17,11 +17,11 @@ return (<>
 					fontWeight: 'title',
 					fontSize: '3rem'
 				}}>NeoMemorizer</h1>
-				{/*				<nav className={navStyles.actualNav}>
+				<nav className={navStyles.actualNav}>
 					<Link href='/'>Use</Link>
-					<Link href='/settings'>Settings</Link>
+{/*					<Link href='/settings'>Settings</Link>*/null}
 					<Link href='/theme'>Theme</Link>
-				</nav>*/null}
+				</nav>
 			</div>
 			<Component {...pageProps} />
 		</div>
